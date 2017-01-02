@@ -18,14 +18,14 @@ class WebSocketConfig implements WebSocketConfigurer {
     @Override
     public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
 
-        registry.addHandler(myHandler(), "/myHandler").setAllowedOrigins("http://mydomain.com").withSockJS();
+        registry.addHandler(wsHandler(), "/wsHandler").withSockJS();
 
     }
 
     @Bean
-    public WebSocketHandler myHandler() {
+    public WebSocketHandler wsHandler() {
 
-        return new MyHandler();
+        return new WSHandler();
 
     }
 

@@ -1,5 +1,6 @@
 package org.bantu.player
 
+import org.bantu.player.websocket.WebSocketConfig
 import org.springframework.boot.SpringApplication
 
 /**
@@ -10,8 +11,7 @@ class Startup {
 
     static void main(String[] args){
 
-        //Object[] sources = [Resources.class,ServletBean.class,JerseyConfig.class];
-        Object[] sources = [Resources.class,ServletBean.class];
+        Object[] sources = [Resources.class, ServletBean.class, WebSocketConfig.class];
         SpringApplication.run(sources,args);
 
 
